@@ -3,6 +3,18 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class StudentSystem {
+
+    private static final String ADD_STUDENT = "1";
+    private static final String DELETE_STUDENT = "2";
+    private static final String UPDATE_STUDENT = "3";
+    private static final String QUERY_STUDENT = "4";
+    private static final String EXIT_STUDENT = "5";
+
+    private static final String USER_REGISTERED = "1";
+    private static final String USER_LOGIN = "2";
+    private static final String FORGET_PASSWORD = "3";
+    private static final String EXIT = "4";
+    
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
@@ -25,23 +37,23 @@ public class StudentSystem {
             System.out.println("----------------------------------");
 
             switch (choice) {
-                case "1": {
+                case ADD_STUDENT: {
                     addStudent(list);
                     break;
                 }
-                case "2": {
+                case DELETE_STUDENT: {
                     deleteStudent(list);
                     break;
                 }
-                case "3": {
+                case UPDATE_STUDENT: {
                     updateStudent(list);
                     break;
                 }
-                case "4": {
+                case QUERY_STUDENT: {
                     queryStudent(list);
                     break;
                 }
-                case "5": {
+                case EXIT_STUDENT: {
                     System.out.println("---------感谢使用学生管理系统---------");
                     break loop;
                 }
@@ -185,19 +197,19 @@ public class StudentSystem {
             String choice = sc.next();
 
             switch (choice) {
-                case "1": {
+                case USER_REGISTERED: {
                     userRegistered(userList);
                     break;
                 }
-                case "2": {
+                case USER_LOGIN: {
                     userLogin(userList, studentList);
                     break;
                 }
-                case "3": {
+                case FORGET_PASSWORD: {
                     forgetPassword(userList);
                     break;
                 }
-                case "4": {
+                case EXIT: {
                     break loop;
                 }
                 default: {
